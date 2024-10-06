@@ -1,39 +1,32 @@
 # weather_app
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+I wrote a program that has the user login or create an account then input information on their name, where they live, and their preference of farenheit or celcius. This information is stored in the cloud, and called in multiple functions in order to successfully gather the data from the API. Learning to integrate these together in the same project really helped me understand more fully the process in which API's and databases work together. 
 
-{Provide a description of the software that you wrote and how it integrates with a Cloud Database. Describe how to use your program.}
+I decided to make this project to learn more about cloud databases, specifically firebase, a Google based cloud database that doesn't require me to pay. I also learned how to use API's in conjuncture with the database. 
 
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=OcZq6GpVqpc)
 
 # Cloud Database
 
-{Describe the cloud database you are using.}
+I am using a cloud database called Firestore. It is a free-to-use, small-scale database provided by Google and is very intuitive. Firestore offers real-time syncing across devices, making it ideal for building responsive, scalable applications.
 
-{Describe the structure of the database that you created.}
+I created a very simple data structure using dictionaries, collections, and documents. The collection was called user, and everytime a new user was made, the user ID would be created as a document, which made it very simple to just use the id to access the information based on the user that was logged in. Within the document, there was contained a dictionary with the name, city, and temperature preference within.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+I used VScode to code this project.
 
-{Describe the programming language that you used and any libraries.}
+This is written in python using the libraries: firebase_admin(database), requests(api), os(local computer), 
 
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
 
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [WeatherAPI](www.weatherapi.com)
+- [Firebase](https://console.firebase.google.com)
 
 # Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Add GUI
+- Add user authentication
+- Add more variety to display weather
