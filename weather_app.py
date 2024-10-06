@@ -2,14 +2,17 @@ import firebase_admin
 import requests
 from firebase_admin import credentials, firestore, auth
 import os
-import requests
+from dotenv import load_dotenv
 
-cred = credentials.Certificate(r"C:\Users\thoma\Desktop\Fall 2024\CSE-310\weather-app-f46a9-firebase-adminsdk-v2lvq-25cf0375d2.json")
+load_dotenv()
+
+firebase_path = os.getenv('firebase_cert_path')
+cred = credentials.Certificate(firebase_path)
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
-API_key = '1554f3ea3d354cdd8a6153552243009'
-base_URL = "http://api.weatherapi.com/v1/current.json"
+API_key = os.getenv('API_key')
+base_URL = os.getenv('base_URL')
 
 
 def Add_User():
